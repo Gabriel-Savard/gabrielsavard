@@ -1,0 +1,21 @@
+/* Bop animation */
+@keyframes arrow-animated {
+    0% {
+        transform: translateY(0);
+        filter: drop-shadow(0 0 .75rem white);
+    }
+    50% {
+        transform: translateY(10px);
+        filter: drop-shadow(1 1 1rem white);
+    }
+    100% {
+        transform: translateY(0);
+        filter: drop-shadow(0 0 .75rem white);
+    }
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}

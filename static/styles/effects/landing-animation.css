@@ -1,0 +1,55 @@
+@import url(../colours.css);
+
+svg#landing {
+    width: 250px;
+    height: 250px;
+
+    margin: auto auto;
+}
+
+svg#landing circle {
+    stroke: var(--secondary-colour);
+    fill: transparent;
+}
+circle.orbit {
+    opacity: 0.3;
+}
+
+@keyframes orbit {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+@keyframes zoom {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(2);
+    }
+}
+
+#sol > g {transform-origin: center;}
+
+#sol {
+    transform-origin: center;
+}
+#mercury {
+    animation: orbit 2.4s linear infinite;
+    transform-origin: center;
+}
+#venus {
+    animation: orbit 6.2s linear infinite;
+    transform-origin: center;
+}
+#earth {
+    animation: orbit 10s linear infinite;
+    transform-origin: center;
+}
+#mars {
+    animation: orbit 18s linear infinite;
+    transform-origin: center;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GS | Contact me</title>
+
+    <link rel="shortcut icon" href="assets/icons/logo/logo.ico" type="image/x-icon">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/contact.css">
+
+    <!-- Scripts -->
+    <script defer src="js/menu.js"></script>
+    <script defer src="js/theme-changer.js"></script>
+    <script defer src="js/send-button.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Gabriel Savard</a>
+            <input type="checkbox" id="toggler">
+            <label for="toggler" id="hamburger" class="" onclick="Rotating()"><i class="menubar">bar</i><i class="menubar">bar</i><i class="menubar">bar</i></label>
+            <div class="menu">
+                <ul class="list">
+                    <li><button class="resbtn" id="other" onclick="location.href='index.html#home'">Home</button></li>
+                    <li>
+                        <button class="resbtn" id="navigation" onclick="DropDown('navigation', 'resourcesNav')">
+                            Resources
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="arrow">
+                                <path d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z"/>
+                            </svg>
+                        </button>
+                        <div class="resources" id="resourcesNav">
+                            <button class="navbtn" onclick="location.href='resources.html#projects'">Projects</button>
+                            <button class="navbtn" onclick="location.href='resources.html#gallery'">Gallery</button>
+                        </div>
+                    </li>
+                    <li><button class="resbtn" id="other" onclick="location.href='contact.html'">Contact</li>
+                    <li><div class="color-changer">
+                        <button id="light-btn" class="cc-toggle" onclick="themeToggle(1)">
+                            <svg enable-background="new 0 0 32 32" id="Outline" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><g><path d="M16,26c-5.514,0-10-4.486-10-10S10.486,6,16,6s10,4.486,10,10S21.514,26,16,26z M16,8c-4.411,0-8,3.589-8,8s3.589,8,8,8   s8-3.589,8-8S20.411,8,16,8z"/><rect height="4" width="2" x="15"/><rect height="4" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -2.5269 6.1006)" width="2" x="5.101" y="4.101"/><rect height="2" width="4" y="15"/><rect height="2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -16.5268 11.8995)" width="4" x="4.101" y="24.9"/><rect height="4" width="2" x="15" y="28"/><rect height="4" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -10.7279 25.8994)" width="2" x="24.9" y="23.9"/><rect height="2" width="4" x="28" y="15"/><rect height="2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 3.272 20.1005)" width="4" x="23.9" y="5.101"/></g></svg>
+                            light
+                        </button>
+                        <button id="space-btn" class="cc-toggle" onclick="themeToggle(0)">
+                            <svg data-name="Layer 1" id="Layer_1" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M12.78629,31.23559a.59975.59975,0,0,1-.59961-.59961A10.95091,10.95091,0,0,0,.86442,19.31371a.59961.59961,0,1,1,0-1.19922A10.95091,10.95091,0,0,0,12.18668,6.79223a.59961.59961,0,0,1,1.19922,0A10.95092,10.95092,0,0,0,24.70817,18.11449a.59961.59961,0,0,1,0,1.19922A10.95092,10.95092,0,0,0,13.3859,30.636.59974.59974,0,0,1,12.78629,31.23559ZM4.93473,18.7141a11.75138,11.75138,0,0,1,7.85156,7.85156,11.75142,11.75142,0,0,1,7.85157-7.85156,11.7514,11.7514,0,0,1-7.85157-7.85156A11.75136,11.75136,0,0,1,4.93473,18.7141Z"/><path d="M24.89372,14.4475a.59973.59973,0,0,1-.59961-.59961,5.39837,5.39837,0,0,0-5.64258-5.6416.59961.59961,0,0,1,0-1.19922,5.39862,5.39862,0,0,0,5.64258-5.64258.59961.59961,0,1,1,1.19921,0A5.39862,5.39862,0,0,0,31.1359,7.00707a.59961.59961,0,1,1,0,1.19922,5.39837,5.39837,0,0,0-5.64258,5.6416A.59973.59973,0,0,1,24.89372,14.4475Zm-3.29-6.84082a6.3743,6.3743,0,0,1,3.29,3.29,6.37428,6.37428,0,0,1,3.29-3.29,6.37779,6.37779,0,0,1-3.29-3.29A6.37781,6.37781,0,0,1,21.60368,7.60668Z"/></svg>
+                            space
+                        </button>
+                        <button id="dark-btn" class="cc-toggle" onclick="themeToggle(2)">
+                            <svg enable-background="new 0 0 512 512" height="512px" id="Layer_1" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M349.852,343.15c-49.875,49.916-131.083,49.916-181,0c-49.916-49.918-49.916-131.125,0-181.021  c13.209-13.187,29.312-23.25,47.832-29.812c5.834-2.042,12.293-0.562,16.625,3.792c4.376,4.375,5.855,10.833,3.793,16.625  c-12.542,35.375-4,73.666,22.25,99.917c26.209,26.228,64.5,34.75,99.916,22.25c5.792-2.062,12.271-0.582,16.625,3.793  c4.376,4.332,5.834,10.812,3.771,16.625C373.143,313.838,363.06,329.941,349.852,343.15z M191.477,184.754  c-37.438,37.438-37.438,98.354,0,135.771c40,40.021,108.125,36.416,143-8.168c-35.959,2.25-71.375-10.729-97.75-37.084  c-26.375-26.354-39.333-61.771-37.084-97.729C196.769,179.796,194.039,182.192,191.477,184.754z"/></svg>
+                            dark
+                        </button>
+                    </div></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="form">
+            <div class="top-border"><div class="title">Contact Me</div></div>
+            <div class="left-border"><div class="deco"></div></div>
+            <div class="contact-form">
+                Name:
+                <input type="text" id="name" placeholder="Jean Luc Picard" required>
+                <br>
+                Email:
+                <input type="email" id="email" placeholder="uss@entreprise.com" required>
+                <br><br>
+                Message:<br>
+                <textarea id="message" rows="10" placeholder="What's on your mind?"></textarea>
+                <br>
+                <div class="center">
+                    <input type="submit" value="Send Message" onclick="messageSend()">
+                </div>
+            </div>
+            <div class="bottom-border"><div class="break"></div></div>
+        </section>
+
+        <section id="calendar">
+            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FHalifax&showTitle=0&showPrint=0&showTabs=1&showCalendars=0&src=Z2Fic2F2YXJkLmV0dWRlc0BnbWFpbC5jb20&color=%23616161"></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <ul class="footer-list">
+                <li>
+                    <a href="https://www.youtube.com/@gabsavardprog" target="_blank">
+                        <img src="assets/icons/social/icon_youtube.png" alt="YouTube icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/Gabriel-Savard" target="_blank">
+                        <img src="assets/icons/social/icon_github.png" alt="Github icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/gabsavard.prog/" target="_blank">
+                        <img src="assets/icons/social/icon_instagram.png" alt="Instagram icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.reddit.com/user/GabSavardProg" target="_blank">
+                        <img src="assets/icons/social/icon_reddit.png" alt="Reddit icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/GabSavardProg" target="_blank">
+                        <img src="assets/icons/social/icon_twitter.png" alt="Twitter icon">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <p>
+            © 2023 Gabriel Savard. All rights reserved.
+        </p>
+    </footer>
+</body>
+</html>

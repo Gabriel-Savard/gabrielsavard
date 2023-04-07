@@ -1,0 +1,140 @@
+/* Imports */
+@import url(base.css);
+
+/* Section base */
+.section-title {
+    font-family: 'Roboto';
+    font-weight: 550;
+    font-size: 2rem;
+
+    text-decoration: underline;
+
+    color: var(--secondary-colour);
+
+    margin: 15px;
+
+    margin-bottom: 10px;
+}
+
+/* Projects */
+.projects {
+    display: flexbox;
+
+    max-height: 35px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--secondary-colour);
+    border-radius: 24px;
+    padding: 10px;
+
+    transition: 0.7s ease-in-out;
+
+    margin: 10px;
+}
+.projects:hover {
+    max-height: 230px;
+}
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 1px;
+}
+.title {
+    font-family: 'Roboto';
+    font-weight: 550;
+    font-size: 1.8rem;
+    color: var(--secondary-colour);
+
+    transition: 0.7s;
+}
+.projects:hover .title {
+    color: var(--accent-colour);
+}
+.type {
+    font-family: 'Arial';
+    font-weight: 550;
+    font-size: 1.2rem;
+    color:var(--accent-colour);
+
+    opacity: 1;
+
+    transition: 0.7s;
+}
+.projects:hover .type {
+    opacity: 0;
+}
+.desc {
+    font-family: 'Arial';
+    font-size: 1rem;
+    opacity: 0;
+
+    color:var(--secondary-colour);
+
+    transition: 0.7s;
+
+    line-height: 25px;
+}
+.projects:hover .desc {
+    opacity: 1;
+}
+
+/* Gallery */
+.gallery-container {
+    border: 1px solid var(--secondary-colour);
+    border-radius: 26px;
+    
+    margin: 0 10px;
+
+    overflow: hidden;
+
+    height: 500px;
+}
+
+.gallery-row {
+    display: flex;
+    flex-direction: row;
+    height: 250px;
+}
+
+.item {
+    flex: 1;
+    height: 100%;
+    transition: flex 0.8s ease;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+}
+.item:hover {
+    flex: 3.5;
+}
+
+
+/* Screen sizes */
+@media screen and (min-width: 700px) {
+    .section-title {
+        font-size: 2.8rem;
+        margin-top: 25px;
+    }
+    .projects {max-height: 45px;}
+    .title {font-size: 2.4rem;}
+    .type {font-size: 1.6rem;}
+    .desc {font-size: 1.3rem;}    
+    .gallery-container{
+        height: 700px;
+        margin: 10px 45px;
+    }
+    .gallery-row {height: 350px;}
+}
+@media screen and (min-width: 1000px) {
+    .section-title {
+        margin: 40px 13vw;
+        margin-bottom: 0;
+    }
+    .projects {margin: 10px 13vw;}
+    .gallery-container {margin: 10px 13vw;}
+}

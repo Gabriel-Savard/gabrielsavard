@@ -1,0 +1,295 @@
+/* Imports */
+@import url(base.css);
+@import url(effects/animations.css);
+@import url(effects/landing-animation.css);
+
+/* Landing section */
+section#landing {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Title */
+section#landing .title {
+    margin-top: 80px;
+}
+section#landing .title h1 {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--secondary-colour);
+
+    margin-left: -10rem;
+}
+section#landing .title h2 {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 2.9rem;
+    color: var(--secondary-colour);
+
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+}
+section#landing .title h3 {
+    font-family: 'Arial';
+    font-weight: 400;
+    color: var(--secondary-colour);
+}
+
+/* Arrow */
+a#arrow {
+    width:fit-content;
+    margin: auto auto;
+
+    font-size: 0;
+}
+section#landing svg#arrow {
+    margin: auto auto;
+    fill: var(--secondary-colour);
+    opacity: .7;
+
+    filter: drop-shadow(0 0 0.75rem var(--secondary-colour));
+
+    transition: 1s;
+
+    animation: arrow-animated 4s linear infinite;
+
+    margin-top: 20px;
+
+    scale: 1.3;
+    rotate: 180deg;
+}
+
+/* Home section */
+/* A little about me */
+section#home {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 20px;
+}
+section#home .about-me h4 {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 1.8rem;
+
+    text-decoration: underline;
+
+    color:var(--secondary-colour);
+
+    letter-spacing: .25rem;
+}
+section#home .about-me .content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+section#home .about-me .content p {
+    font-family: 'Arial';
+    font-weight: 400;
+    font-size: 1rem;
+
+    color:var(--secondary-colour);
+
+    text-align: left;
+
+    margin: 10px 20px;
+
+    line-height: 25px;
+}
+
+section#home .about-me .content img {
+    width: 85%;
+    
+    border: 2px solid var(--secondary-colour);
+}
+
+section#home .tab {
+    margin-right: 27px;
+    margin-top: 10px;
+}
+section#home .about-me .container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    margin-right: auto;
+    margin-left: auto;
+
+    justify-content: center;
+}
+h5 {
+    color: var(--secondary-colour);
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 25px;
+
+    font-size: 1.2rem;
+    font-family: 'Arial';
+    font-weight: 550;
+    text-decoration: underline;
+}
+.container .tabcontent {
+    border: solid var(--secondary-colour) 2px;
+    margin: 10px 25px;
+}
+.container .tabcontent th {
+    font-size: 1.4rem;
+    padding: 10px 10px 10px 0px;
+    border-bottom: dashed var(--secondary-colour) 1px;
+    color: var(--secondary-colour);
+    margin-left: 1vw;
+    margin-right: 1vw;
+    font-family: 'Roboto';
+    font-weight: 550;
+    text-align: left;
+
+    animation: fadeIn 1s;
+}
+.container .tabcontent td {
+    font-weight: 550;
+
+    font-family: 'Arial';
+    padding-left: 10%;
+    font-size: 1rem;
+    color: var(--secondary-colour);
+
+    text-align: left;
+}
+
+button.tablinks {
+    background-color: transparent;
+    border: var(--secondary-colour) solid 2px;
+
+    margin: 0 -2px;
+
+    cursor: pointer;
+}
+button.tablinks span {
+    color:var(--secondary-colour);
+    padding: 0.1rem;
+
+    font-family: 'Arial';
+    font-size: 1.03rem;
+    font-weight: 550;
+}
+
+button.tablinks.selected {
+    background-color: var(--secondary-colour);
+}
+button.tablinks.selected span {
+    color: var(--primary-colour);
+}
+
+/* Screen sizes */
+@media screen and (min-width: 700px) {
+    .title {
+        margin-bottom: 30px;
+    }
+    section#landing .title h1 {
+        font-size: 1.8rem;
+    }
+    section#landing .title h2 {
+        font-size: 3.5rem;
+    }
+    section#landing .title h3 {
+        font-size: 1.5rem;
+    }
+
+    section#landing svg#arrow {
+        scale: 1.5;
+        margin-top: 40px;
+    }
+
+    section#landing svg#landing {
+        scale: 1.3;
+    }
+
+    section#home .about-me h4 {
+        font-size: 2.3rem;
+    }
+    section#home .about-me .content p {
+        max-width: 45%;
+        font-size: 1.2rem;
+    }
+    section#home .about-me .content img {
+        max-width: 350px;
+        height: 50%;
+    }
+    
+    h5 {
+        font-size: 1.5rem;
+    }
+
+    .container .tabcontent th {
+        font-size: 1.8rem;
+    }
+    .container .tabcontent td {
+        font-size: 1.3rem;
+        margin-top: -25px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .title {
+        margin-bottom: 30px;
+    }
+    section#landing .title h1 {
+        font-size: 2.2rem;
+    }
+    section#landing .title h2 {
+        font-size: 4rem;
+    }
+    section#landing svg#arrow {
+        scale: 1.7;
+        margin-top: 40px;
+    }
+    section#landing svg#landing {
+        scale: 1.4;
+    }
+
+    section#home .about-me h4 {
+        font-size: 2.8rem;
+    }
+    section#home .about-me .content {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    section#home .about-me .content p {
+        max-width: 50%;
+        font-size: 1.4rem;
+        line-height: 35px;
+    }
+    section#home .about-me .content img {
+        max-width: 400px;
+        height: 50%;
+    }
+
+    h5 {
+        font-size: 2.2rem;
+        margin-left: 170px;
+    }
+
+    button.tablinks span {
+        font-size: 1.7rem;
+    }
+    .container {
+        width: 70%;
+    }
+    .container .tabcontent th {
+        font-size: 2rem;
+    }
+    .container .tabcontent td {
+        font-size: 1.6rem;
+        margin-top: -30px;
+    }
+
+    section#home {
+        padding-top: 50px;
+    }
+}

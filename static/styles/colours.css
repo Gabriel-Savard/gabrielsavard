@@ -1,0 +1,16 @@
+/* Main palette */
+.space-theme {
+    --primary-colour: #252b39;
+    --secondary-colour: #afb8ba;
+    --accent-colour: #ef820d;
+}
+.light-theme {
+    --primary-colour: #d1d1d1;
+    --secondary-colour: black;
+    --accent-colour: red;
+}
+.dark-theme {
+    --primary-colour: rgb(30, 30, 30);
+    --secondary-colour: #d1d1d1;
+    --accent-colour: #00c5c8;
+}
